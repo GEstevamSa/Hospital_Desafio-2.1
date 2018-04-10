@@ -9,6 +9,7 @@ namespace Hospital_Desafio.Models
 {
     public class Supervisor
     {
+        [Key]
         public int ID { get; set; }
 
         [Required]

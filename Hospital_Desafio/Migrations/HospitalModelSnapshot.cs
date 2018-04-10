@@ -41,7 +41,7 @@ namespace Hospital_Desafio.Migrations
                 {
                     b.Property<int>("ClinicasID");
 
-                    b.Property<int?>("ClinicasID1");
+                    b.Property<int?>("ClinicasID");
 
                     b.Property<int>("DepartamentoID");
 
@@ -52,7 +52,7 @@ namespace Hospital_Desafio.Migrations
 
                     b.HasKey("ClinicasID");
 
-                    b.HasIndex("ClinicasID1");
+                    b.HasIndex("ClinicasID");
 
                     b.HasIndex("DepartamentoID");
 
@@ -168,7 +168,7 @@ namespace Hospital_Desafio.Migrations
                 {
                     b.HasOne("Hospital_Desafio.Models.Clinicas")
                         .WithMany("Clinica")
-                        .HasForeignKey("ClinicasID1");
+                        .HasForeignKey("ClinicasID");
 
                     b.HasOne("Hospital_Desafio.Models.Departamento", "Departamento")
                         .WithMany("Clinicas")

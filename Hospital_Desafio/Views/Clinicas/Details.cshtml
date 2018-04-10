@@ -1,0 +1,36 @@
+﻿@model Hospital_Desafio.Models.Clinicas
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Clinicas</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NomeClinica)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NomeClinica)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Estrelas)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Estrelas)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Departamento)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Departamento.DepartamentoID)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ClinicasID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

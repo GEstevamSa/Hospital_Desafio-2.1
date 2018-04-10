@@ -25,7 +25,7 @@ namespace Hospital_Desafio.Migrations
                 defaultValue: "");
 
             migrationBuilder.AddColumn<int>(
-                name: "ClinicasID1",
+                name: "ClinicasID",
                 table: "Clinica",
                 nullable: true);
 
@@ -127,9 +127,9 @@ namespace Hospital_Desafio.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Clinica_ClinicasID1",
+                name: "IX_Clinica_ClinicasID",
                 table: "Clinica",
-                column: "ClinicasID1");
+                column: "ClinicasID");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Clinica_DepartamentoID",
@@ -152,9 +152,9 @@ namespace Hospital_Desafio.Migrations
                 column: "SupervisorID");
 
             migrationBuilder.AddForeignKey(
-                name: "FK_Clinica_Clinica_ClinicasID1",
+                name: "FK_Clinica_Clinica_ClinicasID",
                 table: "Clinica",
-                column: "ClinicasID1",
+                column: "ClinicasID",
                 principalTable: "Clinica",
                 principalColumn: "ClinicasID",
                 onDelete: ReferentialAction.Restrict);
@@ -171,7 +171,7 @@ namespace Hospital_Desafio.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropForeignKey(
-                name: "FK_Clinica_Clinica_ClinicasID1",
+                name: "FK_Clinica_Clinica_ClinicasID",
                 table: "Clinica");
 
             migrationBuilder.DropForeignKey(
@@ -191,7 +191,7 @@ namespace Hospital_Desafio.Migrations
                 name: "Supervisor");
 
             migrationBuilder.DropIndex(
-                name: "IX_Clinica_ClinicasID1",
+                name: "IX_Clinica_ClinicasID",
                 table: "Clinica");
 
             migrationBuilder.DropIndex(
@@ -203,7 +203,7 @@ namespace Hospital_Desafio.Migrations
                 table: "Medico");
 
             migrationBuilder.DropColumn(
-                name: "ClinicasID1",
+                name: "ClinicasID",
                 table: "Clinica");
 
             migrationBuilder.DropColumn(
