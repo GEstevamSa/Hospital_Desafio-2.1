@@ -22,7 +22,9 @@ namespace Hospital_Desafio.Controllers
         // GET: Clinicas
         public async Task<IActionResult> Index()
         {
-            var clinicas = _context.Clinicas.Include(c => c.Departamento);
+            var clinicas = _context.Clinicas
+                .Include(c => c.Departamento)
+                .AsNoTracking();
             return View(await clinicas.ToListAsync());
         }
 

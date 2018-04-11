@@ -1,0 +1,65 @@
+﻿@model Hospital_Desafio.Models.HospitalViewsModels.SupervisorIndexMode
+
+@{
+    ViewData["Title"] = "Supervisores";
+}
+
+<h2>Supervisores</h2>
+
+<p>
+    <a asp-action="Create">Criar um Novo!</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Primeiro Nome</th>
+            <th>Sobrenome</th>
+            <th>Experiencia</th>
+            <th>Departamento</th>
+            <th>Clinicas</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Supervisores)
+{
+    string selectedRow = "";
+    if(item.ID == (int?)ViewData["SupervisorID"])
+    {
+        selectedRow = "sucess";
+    }
+        <tr class="@selectedRow">
+            <td>
+                @Html.DisplayFor(modelItem => item.PrimeiroNome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sobrenome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Experiencia)
+            </td>
+            <td>
+                @if (item.TarefasInstrutor != null)
+                {
+                    @item.TarefasInstrutor.Lugar;
+                }
+            </td>
+            <td>
+                @{ 
+                    foreach(var clinica in item.AtribuicaodeTarefas)
+                    {
+                        @clinica.Clinicas.ClinicasID @: @clinica.Clinicas.NomeClinica <br/>
+
+                    }
+                }
+            </td>
+            <td>
+                <a asp-action="Index" asp-route-id="@item.ID">Selecionar</a> |
+                <a asp-action="Edit" asp-route-id="@item.ID">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.ID">Detalhes</a> |
+                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

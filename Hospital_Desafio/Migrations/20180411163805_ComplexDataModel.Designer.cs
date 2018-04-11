@@ -11,7 +11,7 @@ using System;
 namespace Hospital_Desafio.Migrations
 {
     [DbContext(typeof(Hospital))]
-    [Migration("20180410164323_ComplexDataModel")]
+    [Migration("20180411163805_ComplexDataModel")]
     partial class ComplexDataModel
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -42,8 +42,6 @@ namespace Hospital_Desafio.Migrations
                 {
                     b.Property<int>("ClinicasID");
 
-                    b.Property<int?>("ClinicasID1");
-
                     b.Property<int>("DepartamentoID");
 
                     b.Property<int>("Estrelas");
@@ -52,8 +50,6 @@ namespace Hospital_Desafio.Migrations
                         .HasMaxLength(50);
 
                     b.HasKey("ClinicasID");
-
-                    b.HasIndex("ClinicasID1");
 
                     b.HasIndex("DepartamentoID");
 
@@ -127,13 +123,13 @@ namespace Hospital_Desafio.Migrations
 
                     b.Property<DateTime>("Experiencia");
 
-                    b.Property<string>("FirstMidName")
+                    b.Property<string>("PrimeiroNome")
                         .IsRequired()
-                        .HasColumnName("PrimeiroNome")
                         .HasMaxLength(50);
 
                     b.Property<string>("Sobrenome")
                         .IsRequired()
+                        .HasColumnName("PrimeiroNome")
                         .HasMaxLength(50);
 
                     b.HasKey("ID");
@@ -156,7 +152,7 @@ namespace Hospital_Desafio.Migrations
             modelBuilder.Entity("Hospital_Desafio.Models.AtribuicaodeTarefas", b =>
                 {
                     b.HasOne("Hospital_Desafio.Models.Clinicas", "Clinicas")
-                        .WithMany()
+                        .WithMany("atribuicaodeTarefas")
                         .HasForeignKey("ClinicasID");
 
                     b.HasOne("Hospital_Desafio.Models.Supervisor", "Supervisor")
@@ -167,10 +163,6 @@ namespace Hospital_Desafio.Migrations
 
             modelBuilder.Entity("Hospital_Desafio.Models.Clinicas", b =>
                 {
-                    b.HasOne("Hospital_Desafio.Models.Clinicas")
-                        .WithMany("Clinica")
-                        .HasForeignKey("ClinicasID1");
-
                     b.HasOne("Hospital_Desafio.Models.Departamento", "Departamento")
                         .WithMany("Clinicas")
                         .HasForeignKey("DepartamentoID")

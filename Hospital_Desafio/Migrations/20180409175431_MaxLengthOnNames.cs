@@ -9,7 +9,7 @@ namespace Hospital_Desafio.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.AlterColumn<string>(
-                name: "Sobrenome",
+                name: "PrimeiroNome",
                 table: "Medico",
                 maxLength: 50,
                 nullable: true,

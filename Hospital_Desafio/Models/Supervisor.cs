@@ -13,15 +13,15 @@ namespace Hospital_Desafio.Models
         public int ID { get; set; }
 
         [Required]
-        [Display(Name = "Sobrenome")]
+        [Display(Name = "PrimeiroNome")]
         [StringLength(50)]
-        public string Sobrenome { get; set; }
+        public string PrimeiroNome { get; set; }
          
         [Required]
         [Column("PrimeiroNome")]
-        [Display(Name = "Primeiro Nome")]
+        [Display(Name = "Sobrenome")]
         [StringLength(50)]
-        public string FirstMidName { get; set; }
+        public string Sobrenome { get; set; }
 
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
@@ -31,7 +31,7 @@ namespace Hospital_Desafio.Models
         [Display(Name = "Full Name")]
         public string FullName
         {
-            get { return Sobrenome + ", " + FirstMidName; }
+            get { return PrimeiroNome + ", " + Sobrenome; }
         }
 
         public ICollection<AtribuicaodeTarefas> AtribuicaodeTarefas { get; set; }

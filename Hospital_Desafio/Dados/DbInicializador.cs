@@ -37,9 +37,9 @@ namespace Hospital_Desafio.Dados
 
             var supervisor = new Supervisor[]
            {
-                new Supervisor{FirstMidName = "Goku", Sobrenome = "Kakarotto", Experiencia = DateTime.Parse("2000-10-25")},
-                new Supervisor{FirstMidName = "Gohan", Sobrenome = "Saiyan", Experiencia = DateTime.Parse("2013-05-10")},
-                new Supervisor{FirstMidName = "Goten", Sobrenome = "Dos Santos", Experiencia = DateTime.Parse("2016-08-01")}
+                new Supervisor{Sobrenome= "kakarotto", PrimeiroNome = "Goku", Experiencia = DateTime.Parse("2000-10-25")},
+                new Supervisor{Sobrenome = "Saiyan", PrimeiroNome = "Gohan", Experiencia = DateTime.Parse("2013-05-10")},
+                new Supervisor{Sobrenome = "Dos Santos", PrimeiroNome = "Goten", Experiencia = DateTime.Parse("2016-08-01")}
            };
 
             foreach (Supervisor s in supervisor)

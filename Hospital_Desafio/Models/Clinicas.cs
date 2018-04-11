@@ -23,6 +23,6 @@ namespace Hospital_Desafio.Models
 
         public Departamento Departamento { get; set; }
         public ICollection<Colecao> Colecaos { get; set; }
-        public ICollection<Clinicas> Clinica { get; set; }
+        public ICollection<AtribuicaodeTarefas> atribuicaodeTarefas{ get; set; }
     }  
 }

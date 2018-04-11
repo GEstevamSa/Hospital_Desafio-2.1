@@ -9,3 +9,14 @@ C:\Users\gestevam\source\repos\Hospital_Desafio\Hospital_Desafio\obj\Debug\netco
 C:\Users\gestevam\source\repos\Hospital_Desafio\Hospital_Desafio\obj\Debug\netcoreapp2.0\Hospital_Desafio.AssemblyInfo.cs
 C:\Users\gestevam\source\repos\Hospital_Desafio\Hospital_Desafio\obj\Debug\netcoreapp2.0\Hospital_Desafio.dll
 C:\Users\gestevam\source\repos\Hospital_Desafio\Hospital_Desafio\obj\Debug\netcoreapp2.0\Hospital_Desafio.pdb
+C:\Users\gestevam\source\repos\Hospital_Desafio 2.1\Hospital_Desafio\bin\Debug\netcoreapp2.0\Hospital_Desafio.deps.json
+C:\Users\gestevam\source\repos\Hospital_Desafio 2.1\Hospital_Desafio\bin\Debug\netcoreapp2.0\Hospital_Desafio.runtimeconfig.json
+C:\Users\gestevam\source\repos\Hospital_Desafio 2.1\Hospital_Desafio\bin\Debug\netcoreapp2.0\Hospital_Desafio.runtimeconfig.dev.json
+C:\Users\gestevam\source\repos\Hospital_Desafio 2.1\Hospital_Desafio\bin\Debug\netcoreapp2.0\Hospital_Desafio.dll
+C:\Users\gestevam\source\repos\Hospital_Desafio 2.1\Hospital_Desafio\bin\Debug\netcoreapp2.0\Hospital_Desafio.pdb
+C:\Users\gestevam\source\repos\Hospital_Desafio 2.1\Hospital_Desafio\obj\Debug\netcoreapp2.0\Hospital_Desafio.csprojResolveAssemblyReference.cache
+C:\Users\gestevam\source\repos\Hospital_Desafio 2.1\Hospital_Desafio\obj\Debug\netcoreapp2.0\Hospital_Desafio.csproj.CoreCompileInputs.cache
+C:\Users\gestevam\source\repos\Hospital_Desafio 2.1\Hospital_Desafio\obj\Debug\netcoreapp2.0\Hospital_Desafio.AssemblyInfoInputs.cache
+C:\Users\gestevam\source\repos\Hospital_Desafio 2.1\Hospital_Desafio\obj\Debug\netcoreapp2.0\Hospital_Desafio.AssemblyInfo.cs
+C:\Users\gestevam\source\repos\Hospital_Desafio 2.1\Hospital_Desafio\obj\Debug\netcoreapp2.0\Hospital_Desafio.dll
+C:\Users\gestevam\source\repos\Hospital_Desafio 2.1\Hospital_Desafio\obj\Debug\netcoreapp2.0\Hospital_Desafio.pdb

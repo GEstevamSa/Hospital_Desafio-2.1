@@ -41,8 +41,6 @@ namespace Hospital_Desafio.Migrations
                 {
                     b.Property<int>("ClinicasID");
 
-                    b.Property<int?>("ClinicasID");
-
                     b.Property<int>("DepartamentoID");
 
                     b.Property<int>("Estrelas");
@@ -51,8 +49,6 @@ namespace Hospital_Desafio.Migrations
                         .HasMaxLength(50);
 
                     b.HasKey("ClinicasID");
-
-                    b.HasIndex("ClinicasID");
 
                     b.HasIndex("DepartamentoID");
 
@@ -126,13 +122,13 @@ namespace Hospital_Desafio.Migrations
 
                     b.Property<DateTime>("Experiencia");
 
-                    b.Property<string>("FirstMidName")
+                    b.Property<string>("PrimeiroNome")
                         .IsRequired()
-                        .HasColumnName("PrimeiroNome")
                         .HasMaxLength(50);
 
                     b.Property<string>("Sobrenome")
                         .IsRequired()
+                        .HasColumnName("PrimeiroNome")
                         .HasMaxLength(50);
 
                     b.HasKey("ID");
@@ -155,7 +151,7 @@ namespace Hospital_Desafio.Migrations
             modelBuilder.Entity("Hospital_Desafio.Models.AtribuicaodeTarefas", b =>
                 {
                     b.HasOne("Hospital_Desafio.Models.Clinicas", "Clinicas")
-                        .WithMany()
+                        .WithMany("atribuicaodeTarefas")
                         .HasForeignKey("ClinicasID");
 
                     b.HasOne("Hospital_Desafio.Models.Supervisor", "Supervisor")
@@ -166,10 +162,6 @@ namespace Hospital_Desafio.Migrations
 
             modelBuilder.Entity("Hospital_Desafio.Models.Clinicas", b =>
                 {
-                    b.HasOne("Hospital_Desafio.Models.Clinicas")
-                        .WithMany("Clinica")
-                        .HasForeignKey("ClinicasID");
-
                     b.HasOne("Hospital_Desafio.Models.Departamento", "Departamento")
                         .WithMany("Clinicas")
                         .HasForeignKey("DepartamentoID")

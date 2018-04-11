@@ -9,7 +9,7 @@ namespace Hospital_Desafio.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropColumn(
-                name: "First Name",
+                name: "Primeiro Nome",
                 table: "Medico");
 
             migrationBuilder.AlterColumn<string>(
@@ -41,7 +41,7 @@ namespace Hospital_Desafio.Migrations
                 oldMaxLength: 50);
 
             migrationBuilder.AddColumn<string>(
-                name: "First Name",
+                name: "PrimeiroNome",
                 table: "Medico",
                 maxLength: 50,
                 nullable: true);

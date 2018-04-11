@@ -31,10 +31,10 @@ namespace Hospital_Desafio.Migrations
 
             //usado mais abaixo na criacao da tabela departamento
             //migrationBuilder.AddColumn<int>( 
-                //name: "DepartamentoID",
-                //table: "Clinica",
-                //nullable: false,
-                //defaultValue: 0);
+            //name: "DepartamentoID",
+            //table: "Clinica",
+            //nullable: false,
+            //defaultValue: 0);
 
             migrationBuilder.CreateTable(
                 name: "Supervisor",
@@ -98,12 +98,12 @@ namespace Hospital_Desafio.Migrations
                         onDelete: ReferentialAction.Restrict);
                 });
 
-            migrationBuilder.Sql("INSERT INTO dbo.Department (Nome, Despesas, DataInicio) VALUES ('Temp', 0.00, GETDATE())");
+            migrationBuilder.Sql("INSERT INTO dbo.Departamento (Nome, Despesas, DataInicio) VALUES ('Temp', 0.00, GETDATE())");
             // Default value for FK points to department created above, with
             // defaultValue changed to 1 in following AddColumn statement.
 
             migrationBuilder.AddColumn<int>(
-                name: "DepartmentoID",
+                name: "DepartamentoID",
                 table: "Clinica",
                 nullable: false,
                 defaultValue: 1);
